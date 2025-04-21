@@ -105,6 +105,6 @@ The tool handles the rest, processing all documents in the folder and organizing
 
 - **CSV and SQL Output**: After extraction, the tool will create a separate CSV file for each table found in the document. These tables will then be converted into SQL scripts, which can be executed to insert the extracted data into a SQL database.
   
-- **Data Integrity**: The dynamic stitching algorithm ensures that multi-page tables are accurately reconstructed, with no data loss across page breaks.
+- **Data Integrity**: The dynamic stitching algorithm ensures that multi-page tables are accurately reconstructed, with minimal data loss across page breaks.
 
 By using this tool, you can enhance your document processing workflows, ensuring accurate extraction and data storage for large or complex documents.
