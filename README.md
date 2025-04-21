@@ -69,29 +69,33 @@ customized-azure-doc-extraction/
 ├── .env                     # Environment variables file
 └── README.md                # Project documentation
 ```
-
 ## Usage
 
 ### Run the Extraction
 
-1. To extract documents, use the following command:
+1. Place your input PDF document in the `data/documents` folder.
+
+2. Run the extraction script:
    ```bash
-   python extract_documents.py --input_file "path_to_your_document.pdf" --output_dir "path_to_output_directory"
+   python extract_documents.py
    ```
 
-2. **Features**:
-   - The tool will extend the page limit for large documents.
+3. **Results**:
+   - The tool will automatically process all documents in the `data/documents` folder.
    - It will resolve table issues and reconstruct multi-page tables.
-   - For each table extracted, a CSV file will be generated, and the data will be converted into SQL.
+   - Extraction results will appear in two locations:
+     - CSV files will be stored in the `data/csv` folder
+     - SQL data will be stored in the `data/database` folder
 
 ### Example
 
-Given an input document `example_document.pdf`, the tool will extract all pages, resolve table splits, and output the result into the directory `output/`. Each table will be stored in its own CSV file and converted into SQL.
+Simply place your PDF documents (like `example_document.pdf`) in the `data/documents` folder and run:
 
 ```bash
-python extract_documents.py --input_file "example_document.pdf" --output_dir "output/"
+python extract_documents.py
 ```
 
+The tool handles the rest, processing all documents in the folder and organizing the extracted data appropriately.
 ### Output Files
 
 - **CSV Files**: A CSV file will be created for each table in the document, saved in the `output/` directory.
