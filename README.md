@@ -54,21 +54,6 @@ The **Customized Azure Document Extraction Tool** enhances the default Azure Doc
      export AZURE_DOCUMENT_INTELLIGENCE_ENDPOINT="your-endpoint-url"
      ```
 
-## Project Structure
-
-```
-customized-azure-doc-extraction/
-├── config.json              # Configuration file with Azure credentials and endpoints
-├── extract_documents.py     # Main script for document extraction
-├── requirements.txt         # Dependencies for the project
-├── utils/                   # Utility scripts for processing extracted data
-│   ├── csv_handler.py       # Handles conversion to CSV
-│   └── sql_handler.py       # Handles conversion to SQL
-├── data/                    # Directory for saving the extracted data
-│   └── output/              # Output directory for extracted files
-├── .env                     # Environment variables file
-└── README.md                # Project documentation
-```
 ## Usage
 
 ### Run the Extraction
@@ -81,7 +66,7 @@ customized-azure-doc-extraction/
    ```
 
 3. **Results**:
-   - The tool will automatically process all documents in the `data/documents` folder.
+   - The script will automatically process all documents in the `data/documents` folder.
    - It will resolve table issues and reconstruct multi-page tables.
    - Extraction results will appear in two locations:
      - CSV files will be stored in the `data/csv` folder
